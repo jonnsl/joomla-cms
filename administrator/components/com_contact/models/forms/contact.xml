@@ -169,6 +169,12 @@
 			size="30"
 		/>
 
+		<field name="links" type="links"
+			label="COM_CONTACT_FIELD_LINKS_LABEL"
+			description="COM_CONTACT_FIELD_LINKS_DESC"
+			class="inputbox"
+			filter="ContactHelper::filterLinks"/>
+
 		<field name="misc" type="editor"
 			label="COM_CONTACT_FIELD_INFORMATION_MISC_LABEL"
 			description="COM_CONTACT_FIELD_INFORMATION_MISC_DESC"
@@ -524,81 +530,6 @@
 				<option value="1">JSHOW</option>
 			</field>
 
-			<field name="linka_name" type="text"
-				label="COM_CONTACT_FIELD_LINKA_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linka" type="text"
-				label="COM_CONTACT_FIELD_LINKA_LABEL"
-				description="COM_CONTACT_FIELD_LINKA_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkb_name" type="text"
-				label="COM_CONTACT_FIELD_LINKB_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkb" type="text"
-				label="COM_CONTACT_FIELD_LINKB_LABEL"
-				description="COM_CONTACT_FIELD_LINKB_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkc_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKC_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkc"
-			type="text"
-				label="COM_CONTACT_FIELD_LINKC_LABEL"
-				description="COM_CONTACT_FIELD_LINKC_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkd_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKD_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-				/>
-
-			<field name="linkd"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKD_LABEL"
-				description="COM_CONTACT_FIELD_LINKD_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linke_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKE_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linke"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKE_LABEL"
-				description="COM_CONTACT_FIELD_LINKE_DESC"
-				class="inputbox"
-				size="30"
-			/>
 			<field
 				name="contact_layout"
 				type="componentlayout"

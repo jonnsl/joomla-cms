@@ -167,10 +167,13 @@ class ContactModelContact extends JModelForm
 				}
 
 				// Convert parameter fields to objects.
-				$registry = new JRegistry;
-				$registry->loadString($data->params);
+				$registry = new JRegistry($data->params);
 				$data->params = clone $this->getState('params');
 				$data->params->merge($registry);
+
+				// Convert links fields to objects.
+				$registry = new JRegistry($data->links);
+				$data->links = $registry->toObject();
 
 				$registry = new JRegistry;
 				$registry->loadString($data->metadata);

@@ -75,7 +75,7 @@ $cparams = JComponentHelper::getParams ('com_media');
 		<?php endif; ?>
 		<?php  echo $this->loadTemplate('form');  ?>
 	<?php endif; ?>
-	<?php if ($this->params->get('show_links')) : ?>
+	<?php if ($this->params->get('show_links') && count($this->contact->links)) : ?>
 		<?php echo $this->loadTemplate('links'); ?>
 	<?php endif; ?>
 	<?php if ($this->params->get('show_articles') && $this->contact->user_id && $this->contact->articles) : ?>

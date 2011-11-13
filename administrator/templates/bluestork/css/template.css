@@ -1023,6 +1023,10 @@ input.required {
 	font-size:1.2em;
 }
 
+.panel .contact-link {
+	border: 1px solid #CCC
+}
+
 /* -------- Batch Section ---------- */
 fieldset.batch {
 	margin: 20px 0 10px 0;

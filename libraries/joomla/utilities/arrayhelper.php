@@ -410,4 +410,13 @@ class JArrayHelper
 
 		return $myArray;
 	}
+
+	public static function resetKeys($array)
+	{
+		reset($array);
+		do {
+			$newArray[] = current($array);
+		} while (next($array));
+		return $newArray;
+ 	}
 }

@@ -220,7 +220,7 @@
 
 		<field name="show_links"
 			label="COM_CONTACT_FIELD_SHOW_LINKS_LABEL"
-			description="COM_CONTACT_FIELD_SHOW_LINKS_LABEL"
+			description="COM_CONTACT_FIELD_SHOW_LINKS_DESC"
 			type="radio"
 			default="1"
 		>
@@ -228,41 +228,6 @@
 			<option value="1">JSHOW</option>
 
 		</field>
-
-			<field name="linka_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKA_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkb_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKB_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linkc_name" type="text"
-				label="COM_CONTACT_FIELD_LINKC_NAME_LABEL" description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox" size="30" />
-
-			<field name="linkd_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKD_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox"
-				size="30"
-			/>
-
-			<field name="linke_name"
-				type="text"
-				label="COM_CONTACT_FIELD_LINKE_NAME_LABEL"
-				description="COM_CONTACT_FIELD_LINK_NAME_DESC"
-				class="inputbox" size="30"
-			/>
 
 	</fieldset>
 	<fieldset name="Icons"

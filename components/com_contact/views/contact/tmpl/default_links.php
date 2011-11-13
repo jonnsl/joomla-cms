@@ -18,24 +18,10 @@ endif;
 
 <div class="contact-links">
 	<ul>
-		<?php
-		    foreach(range('a', 'e') as $char) :// letters 'a' to 'e'
-			    $link = $this->contact->params->get('link'.$char);
-			    $label = $this->contact->params->get('link'.$char.'_name');
-
-			    if( ! $link) :
-			        continue;
-			    endif;
-
-			    // Add 'http://' if not present
-			    $link = (0 === strpos($link, 'http')) ? $link : 'http://'.$link;
-
-			    // If no label is present, take the link
-			    $label = ($label) ? $label : $link;
-			    ?>
-			<li>
-				<a href="<?php echo $link; ?>">
-				    <?php echo $label;  ?>
+		<?php foreach($this->contact->links as $i => $link): ?>
+			<li class="contact-link-<?php echo $i + 1; ?>">
+				<a href="<?php echo $this->escape($link->url); ?>">
+					<?php echo ($link->label ? $this->escape($link->label) : $this->escape($link->url)); ?>
 				</a>
 			</li>
 		<?php endforeach; ?>

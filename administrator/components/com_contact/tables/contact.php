@@ -38,14 +38,12 @@ class ContactTableContact extends JTable
 	public function bind($array, $ignore = '')
 	{
 		if (isset($array['params']) && is_array($array['params'])) {
-			$registry = new JRegistry();
-			$registry->loadArray($array['params']);
+			$registry = new JRegistry($array['params']);
 			$array['params'] = (string) $registry;
 		}
 
 		if (isset($array['metadata']) && is_array($array['metadata'])) {
-			$registry = new JRegistry();
-			$registry->loadArray($array['metadata']);
+			$registry = new JRegistry($array['metadata']);
 			$array['metadata'] = (string) $registry;
 		}
 
@@ -104,6 +102,38 @@ class ContactTableContact extends JTable
 	 */
 	function check()
 	{
+		if (!empty($this->links) && is_array($this->links))
+		{
+			foreach ($this->links as $k => $link)
+			{
+				if ($link['url'] === '')
+				{
+					unset($this->links[$k]);
+					continue;
+				}
+
+				if (JFilterInput::checkAttribute(array('href', $link['url'])))
+				{
+					unset($this->links[$k]);
+					continue;
+				}
+
+				// check for http, https, ftp on webpage
+				if (	(stripos($link['url'], 'http://')	=== false)
+					&&	(stripos($link['url'], 'https://')	=== false)
+					&&	(stripos($link['url'], 'ftp://')	=== false))
+				{
+					$this->links[$k]['url'] = 'http://'.$link['url'];
+				}
+			}
+
+			// Reset the keys, so the JForm can properly bind the links data into the form.
+			$this->links = JArrayHelper::resetKeys($this->links);
+
+			$registry = new JRegistry($this->links);
+			$this->links = (string) $registry;
+		}
+
 		$this->default_con = intval($this->default_con);
 
 		if (JFilterInput::checkAttribute(array ('href', $this->webpage))) {

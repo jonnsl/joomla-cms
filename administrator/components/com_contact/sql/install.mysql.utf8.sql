@@ -11,6 +11,7 @@ CREATE TABLE `#__contact_details` (
   `telephone` varchar(255) default NULL,
   `fax` varchar(255) default NULL,
   `misc` mediumtext,
+  `links` text,
   `image` varchar(255) default NULL,
   `imagepos` varchar(20) default NULL,
   `email_to` varchar(255) default NULL,

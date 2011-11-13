@@ -126,9 +126,12 @@ class ContactModelContact extends JModelAdmin
 	{
 		if ($item = parent::getItem($pk)) {
 			// Convert the params field to an array.
-			$registry = new JRegistry;
-			$registry->loadString($item->metadata);
+			$registry = new JRegistry($item->metadata);
 			$item->metadata = $registry->toArray();
+
+			// Convert the links field to an object.
+			$registry = new JRegistry($item->links);
+			$item->links = $registry->toArray();
 		}
 
 		return $item;

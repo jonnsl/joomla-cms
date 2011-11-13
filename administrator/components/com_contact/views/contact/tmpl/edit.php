@@ -156,6 +156,11 @@ JHtml::_('behavior.formvalidation');
 				</ul>
 			</fieldset>
 
+			<?php echo JHtml::_('sliders.panel',JText::_('COM_CONTACT_LINKS'), 'contact-links'); ?>
+			<fieldset class="panelform">
+				<?php echo $this->form->getInput('links'); ?>
+			</fieldset>
+
 			<?php echo $this->loadTemplate('params'); ?>
 
 			<?php echo $this->loadTemplate('metadata'); ?>
